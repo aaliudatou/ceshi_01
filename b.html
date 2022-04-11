@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <head>
+        <style>
+            @keyframes pulse {
+                0% {}
+                70% {
+                    width: 40px;
+                    height: 40px;
+                    opacity: 0;
+                }
+                100% {
+                    width: 70px;
+                    height: 70px;
+                    opacity: 0;
+                }
+            }
+            
+            .map {
+                position: relative;
+                width: 717px;
+                height: 717px;
+                background: url(./images/xzq.jpg) no-repeat;
+            }
+            
+            .city {
+                position: absolute;
+                top: 599px;
+                left: 204px;
+                /* background-color: #09f; */
+            }
+            
+            .dotted {
+                /* position: absolute;
+            top: 50%;
+            left: 50%; */
+                width: 8px;
+                height: 8px;
+                background-color: #09f;
+                border-radius: 50%;
+            }
+            
+            .city div[class^=pulse] {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 10px #009dfd;
+                border-radius: 50%;
+                animation-name: pulse;
+                animation-duration: 1.2s;
+                animation-delay: 0s;
+                animation-iteration-count: infinite;
+            }
+            
+            .city .pulse2 {
+                animation-delay: 0.4s !important;
+            }
+            
+            .city .pulse3 {
+                animation-delay: 0.8s !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="map">
+            <div class="city">
+                <div class="dotted"></div>
+                <div class="pulse1"></div>
+                <div class="pulse2"></div>
+                <div class="pulse3"></div>
+    </body>
+
+</html>
